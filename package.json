@@ -1,5 +1,5 @@
 {
-  "name": "mern-expense-tracker",
+  "name": "expense-tracker-mern-victory",
   "version": "2.0.0",
   "description": "A MERN stack based expense tracking application",
   "author": "Shama Hoque",
@@ -13,18 +13,22 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/shamahoque/mern-skeleton.git"
+    "url": "https://github.com/coding-to-music/expense-tracker-mern-victory.git"
   },
-  "homepage": "https://github.com/shamahoque/mern-skeleton",
+  "cacheDirectories": [
+    "node_modules",
+    "client/node_modules"
+  ],
+  "homepage": "https://github.com/coding-to-music/expense-tracker-mern-victory",
   "main": "./dist/server.generated.js",
   "scripts": {
     "development": "nodemon",
     "build": "webpack --config webpack.config.client.production.js && webpack --mode=production --config webpack.config.server.js",
-    "start": "NODE_ENV=production node ./dist/server.generated.js"
+    "start": "NODE_ENV=production node ./dist/server.generated.js",
+    "deploy": "git add . && git commit -m Heroku && git push && git push heroku && heroku logs --tail --remote heroku"
   },
   "engines": {
-    "node": "13.12.0",
-    "npm": "6.14.4"
+    "node": "16.x"
   },
   "devDependencies": {
     "@babel/core": "^7.9.0",
