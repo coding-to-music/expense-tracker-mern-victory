@@ -105,6 +105,7 @@ heroku create expense-tracker-mern-victory
 ```java
 heroku config:set
 
+
 heroku config:set MONGODB_URI="mongodb+srv://<userid>:<password>@cluster0.zadqe.mongodb.net/expense-tracker-mern-victory?retryWrites=true&w=majority"
 heroku config:set PASSWORD="something-secret"
 
